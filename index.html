@@ -25,7 +25,8 @@
 	    
 	 function SetEmail() {
 		console.log("setEmail fucntion has run");
-	 	document.getElementById("email").innerHTML = userEmail;
+	 	//document.getElementById("email").innerHTML = userEmail;
+		 unityInstance.SendMessage('Bridge', 'SendToUnity', userEmail);
 	 }
     </script>
     
