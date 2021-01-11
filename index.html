@@ -11,6 +11,24 @@
     <script>
       var unityInstance = UnityLoader.instantiate("unityContainer", "Build/WixHtmlUnityTest.json", {onProgress: UnityProgress});
     </script>
+    
+    <script type="text/javascript">
+      var userEmail;
+      window.onmessage = (event) => {
+        if (event.data) {
+          //document.getElementById("theLabel").innerHTML = event.data;
+          userEmail = event.data;
+		console.log(userEmail);
+		SetEmail();
+        }
+      };
+	    
+	 function SetEmail() {
+		console.log("setEmail fucntion has run");
+	 	document.getElementById("email").innerHTML = userEmail;
+	 }
+    </script>
+    
   </head>
   <body>
     <div class="webgl-content">
